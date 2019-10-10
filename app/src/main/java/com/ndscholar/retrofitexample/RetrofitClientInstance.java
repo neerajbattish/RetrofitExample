@@ -10,11 +10,8 @@ public class RetrofitClientInstance {
 
     public static Retrofit getRetrofitInstance()
     {
-        if(retrofit==null)
-        {
-
-
-            retrofit=new  Retrofit().newBuilder()
+        if (retrofit == null) {
+            retrofit = new retrofit2.Retrofit.Builder()
                     .baseUrl(Base_URL)
                     .addConverterFactory(GsonConverterFactory.create())
                     .build();
